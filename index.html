@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thin-film dewetting results</title>
+<meta name="description" content="Results pages for an M.Tech thesis on spinodal dewetting of nanometre-thin liquid films with physics-informed neural networks and numerical solvers (IIT Delhi).">
+<style>
+  :root {
+    --ink: #1d1d1f; --muted: #5a5a60; --line: #e3e3e6; --accent: #1f4e8c; --card: #ffffff; --bg: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  main { max-width: 860px; margin: 0 auto; padding: 48px 16px 64px; }
+  .eyebrow { color: var(--muted); font-size: 14px; letter-spacing: .02em; margin: 0 0 8px; }
+  h1 { font-size: clamp(26px, 4vw, 34px); line-height: 1.2; margin: 0 0 12px; }
+  .meta { color: var(--muted); margin: 0 0 32px; }
+  h2 { font-size: 20px; margin: 40px 0 12px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  a.card { display: block; border: 1px solid var(--line); border-radius: 10px; padding: 18px 18px 16px;
+           text-decoration: none; color: inherit; background: var(--card); transition: border-color .15s, box-shadow .15s; }
+  a.card:hover, a.card:focus-visible { border-color: var(--accent); box-shadow: 0 2px 10px rgba(31,78,140,.10); outline: none; }
+  .card h3 { margin: 0 0 6px; font-size: 17px; color: var(--accent); }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .note { border-left: 3px solid var(--line); padding: 4px 0 4px 14px; color: var(--muted); font-size: 15px; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">M.Tech thesis (CLD 880) · Department of Chemical Engineering · IIT Delhi</p>
+  <h1>A physics-informed neural network for spinodal dewetting of nanometre-thin liquid films</h1>
+  <p class="meta">Rahul Arvind Masand · Supervisor: Prof. Jayati Sarkar · Results pages that accompany the report of 17 November 2026</p>
+
+  <h2>What these pages show</h2>
+  <p>A liquid film a few nanometres thick on a solid surface thins where it is thinnest and breaks up into drops by itself (spinodal dewetting). The thesis builds numerical solvers and physics-informed neural networks (PINNs) for this process, first with attraction only and then with Born repulsion, which stops the film at a thin floor. The pages below play the solver results as animations, so the break-up can be watched in the browser.</p>
+
+  <h2>Animations</h2>
+  <div class="cards">
+    <a class="card" href="animations/film_2d.html">
+      <h3>Thin film, side view</h3>
+      <p>The film's thickness along one line, from a nearly flat start until the liquid has gathered into a drop.</p>
+    </a>
+    <a class="card" href="animations/film_3d.html">
+      <h3>Thin film in 3D</h3>
+      <p>The whole film until it first reaches the floor, and one drop forming. Drag to turn; needs a browser with WebGL 2.</p>
+    </a>
+    <a class="card" href="animations/fd_answer_key_2d.html">
+      <h3>The 2D answer key</h3>
+      <p>The finite-difference solver's film from τ 0 to 20, used to score the 2D PINN. Heatmap or 3D surface view.</p>
+    </a>
+  </div>
+
+  <h2>How to read them</h2>
+  <p class="note">Each page has a "Technical details" or "Sources" panel naming the run, the solver and the checks behind it. Some results are marked as not yet independently reviewed; the report says which. The pages are self-contained: nothing is loaded from other sites.</p>
+
+  <footer>
+    The full method, the checks and the numbers are in the thesis report. Each page is a self-contained HTML file and opens offline.
+  </footer>
+</main>
+</body>
+</html>
